@@ -14,7 +14,7 @@
     <div class="container">
       <h2>Instansi Kabupaten Tapanuli Utara</h2>
 
-      <button class="btn btn-primary btn-md">Tambah Instansi</button>
+      <button class="btn" ><a class="btn btn-primary btn-md" href="/tbhinstansi" >Tambah Instansi</a></button>
       
       <table class="table table-striped">
         <thead class="thead-dark">

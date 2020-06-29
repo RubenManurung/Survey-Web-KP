@@ -22,4 +22,8 @@ class Controller extends BaseController
     public function survey(){
       return view('survey');
     }
+
+    public function tbhinstansi(){
+      return view('tbhinstansi');
+    }
 }

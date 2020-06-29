@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/hasilSurvey','Controller@index');
 Route::get('/instansi','Controller@instansi');
 Route::get('/survey','Controller@survey');
+Route::get('/tbhinstansi','Controller@tbhinstansi');
