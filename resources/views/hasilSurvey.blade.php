@@ -5,6 +5,6 @@
     <title></title>
   </head>
   <body>
-      <h1>Halaman Hasil Survey</h1>
+      <h1>Hasil Survey Kepuasan Masyarakat</h1>
   </body>
 </html>
