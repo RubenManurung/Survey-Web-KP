@@ -13,8 +13,11 @@
   <body>
     <div class="container">
       <h2>Instansi Kabupaten Tapanuli Utara</h2>
-      <table class="table">
-        <thead>
+
+      <button class="btn btn-primary btn-md">Tambah Instansi</button>
+      
+      <table class="table table-striped">
+        <thead class="thead-dark">
           <tr>
             <th scope="col">Nama Instansi</th>
             <th scope="col">Kepala Dinas</th>
@@ -27,29 +30,29 @@
           <tr>
             <td scope="row">DISKOMINFO</td>
             <td>Polmudi Sagala</td>
-            <td href="">Lihat</td>
-            <td href="">Ubah</td>
+            <td><a href="#">Lihat</a></td>
+            <td><a href="#">Ubah</a></td>
           </tr>
 
           <tr>
             <td scope="row">Dinas Pariwisata</td>
             <td>Binhot Isak Aritonang</td>
-            <td href="">Lihat</td>
-            <td href="">Ubah</td>
+            <td><a href="#">Lihat</a></td>
+            <td><a href="#">Ubah</a></td>
           </tr>
 
           <tr>
             <td scope="row">Dinas Usaha Kecil dan Menengah</td>
             <td>Marco Taruli Parlindungan Panggabean</td>
-            <td href="">Lihat</td>
-            <td href="">Ubah</td>
+            <td><a href="#">Lihat</a></td>
+            <td><a href="#">Ubah</a></td>
           </tr>
 
           <tr>
             <td scope="row">Dinas Pertanian</td>
             <td>Sondang Erikson Yosua Pasaribu</td>
-            <td href="">Lihat</td>
-            <td href="">Ubah</td>
+            <td><a href="#">Lihat</a></td>
+            <td><a href="#">Ubah</a></td>
           </tr>
 
         </tbody>
