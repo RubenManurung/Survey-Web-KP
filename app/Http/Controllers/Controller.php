@@ -26,4 +26,8 @@ class Controller extends BaseController
     public function tbhinstansi(){
       return view('tbhinstansi');
     }
+
+    public function chart(){
+      return view('chart');
+    }
 }
