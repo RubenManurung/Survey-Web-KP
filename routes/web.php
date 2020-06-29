@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts/master');
 });
+
+Route::get('/hasilSurvey','Controller@index');
+Route::get('/instansi','Controller@instansi');
+Route::get('/survey','Controller@survey');
