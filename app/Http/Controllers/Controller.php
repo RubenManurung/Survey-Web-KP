@@ -26,4 +26,16 @@ class Controller extends BaseController
     public function tbhinstansi(){
       return view('tbhinstansi');
     }
+
+    public function layanan(){
+      return view('layanan');
+    }
+
+    public function ubahlayanan(){
+      return view('ubahlayanan');
+    }
+
+    public function ubahinstansi(){
+      return view('ubahinstansi');
+    }
 }
