@@ -32,7 +32,19 @@
 		@include('layouts.includes._sidebar')
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
-		@include('hasilSurvey')
+		<div class="main">
+		  <div class="main-content">
+		    <div class="container-fluid">
+		      <div class="row">
+		        <div class="col-md-12">
+		          <div class="panel">
+		@yield('content')
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
 		<footer>

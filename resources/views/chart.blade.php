@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Comming Soon</h1>
-  </body>
-</html>
+@extends('layouts.master')
+@section('content')
+  <h1>Comming Soon</h1>
+@endsection

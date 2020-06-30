@@ -1,9 +1,5 @@
-<div class="main">
-  <div class="main-content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel">
+@extends('layouts.master')
+@section('content')
             <h1>Hasil Survey Kepuasan Masyarakat</h1>
             <table class="table table-dark">
               <thead>
@@ -21,9 +17,4 @@
                 @endfor
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+@endsection

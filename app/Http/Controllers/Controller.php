@@ -42,4 +42,16 @@ class Controller extends BaseController
     public function ubahinstansi(){
       return view('ubahinstansi');
     }
+
+    public function buatSurvey(){
+      return view('buatSurvey');
+    }
+
+    public function detailSurvey(){
+      return view('detailSurvey');
+    }
+
+    public function buatPertanyaan(){
+      return view('buatPertanyaan');
+    }
 }
