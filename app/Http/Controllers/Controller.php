@@ -30,4 +30,16 @@ class Controller extends BaseController
     public function chart(){
       return view('chart');
     }
+
+    public function layanan(){
+      return view('layanan');
+    }
+
+    public function ubahlayanan(){
+      return view('ubahlayanan');
+    }
+
+    public function ubahinstansi(){
+      return view('ubahinstansi');
+    }
 }

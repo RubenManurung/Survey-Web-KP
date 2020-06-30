@@ -21,4 +21,7 @@ Route::get('/hasilSurvey','Controller@index');
 Route::get('/instansi','Controller@instansi');
 Route::get('/survey','Controller@survey');
 Route::get('/tbhinstansi','Controller@tbhinstansi');
+Route::get('/layanan','Controller@layanan');
+Route::get('/ubahlayanan','Controller@ubahlayanan');
+Route::get('/ubahinstansi','Controller@ubahinstansi');
 Route::get('/chart','Controller@chart');
