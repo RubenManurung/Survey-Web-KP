@@ -1,7 +1,3 @@
-@extends('template')
-@section('title', 'Fuzzy Topsis')
-@section('content')
-
 <div class="main">
   <div class="main-content">
     <div class="container-fluid">
@@ -31,4 +27,3 @@
     </div>
   </div>
 </div>
-@endsection

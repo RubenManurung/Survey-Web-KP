@@ -32,7 +32,7 @@
 		@include('layouts.includes._sidebar')
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
-		@section('content')
+		@include('hasilSurvey')
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
 		<footer>
