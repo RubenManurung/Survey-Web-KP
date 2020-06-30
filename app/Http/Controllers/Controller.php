@@ -54,4 +54,34 @@ class Controller extends BaseController
     public function buatPertanyaan(){
       return view('buatPertanyaan');
     }
+
+
+
+    public function login(){
+      return view('login');
+    }
+
+    public function register(){
+      return view('register');
+    }
+
+    public function homeUser(){
+      return view('homeUser');
+    }
+
+    public function daftarLayananUser(){
+      return view('daftarLayananUser');
+    }
+
+    public function daftarSurveyLayananUser(){
+      return view('daftarSurveyLayananUser');
+    }
+
+    public function pertanyaanSurveyUser(){
+      return view('pertanyaanSurveyUser');
+    }
+
+    public function afterSurveyUser(){
+      return view('afterSurveyUser');
+    }
 }

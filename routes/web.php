@@ -31,3 +31,15 @@ Route::get('/buatSurvey','Controller@buatSurvey');
 
 Route::get('/detailSurvey','Controller@detailSurvey');
 Route::get('/buatPertanyaan','Controller@buatPertanyaan');
+
+
+//Users
+Route::get('/login','Controller@login');
+Route::get('/register','Controller@register');
+Route::get('/homeUser','Controller@homeUser');
+
+Route::get('/daftarLayananUser','Controller@daftarLayananUser');
+Route::get('/daftarSurveyLayananUser','Controller@daftarSurveyLayananUser');
+Route::get('/pertanyaanSurveyUser','Controller@pertanyaanSurveyUser');
+
+Route::get('/afterSurveyUser','Controller@afterSurveyUser');
