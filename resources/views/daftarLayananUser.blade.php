@@ -1,12 +1,5 @@
 @extends('layouts.masterUser')
 @section('contentUser')
-<style media="screen">
-  body{
-    background-image: url('images/girl.jpg');
-  }
-
-</style>
-
   <h1>Daftar Layanan.</h1>
 
   <ol>
