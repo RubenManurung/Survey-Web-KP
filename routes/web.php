@@ -14,11 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('hasilSurvey');
+    return view('admin.hasilSurvey');
 });
 
 Route::get('/hasilSurvey','Controller@index');
 Route::get('/instansi','Controller@instansi');
+
+Route::post('/instansi/create_instansi','Controller@create_instansi');
+Route::get('/instansi/{id}/edit_instansi','Controller@edit_instansi');
+Route::post('/instansi/{id}/update_instansi','Controller@update_instansi');
+
 Route::get('/survey','Controller@survey');
 
 Route::get('/tbhinstansi','Controller@tbhinstansi');
@@ -36,6 +41,7 @@ Route::get('/buatPertanyaan','Controller@buatPertanyaan');
 //Users
 Route::get('/login','Controller@login');
 Route::get('/register','Controller@register');
+Route::post('/register/create_register','Controller@create_register');
 Route::get('/homeUser','Controller@homeUser');
 
 Route::get('/daftarLayananUser','Controller@daftarLayananUser');
