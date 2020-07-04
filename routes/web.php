@@ -23,6 +23,9 @@ Route::get('/instansi','Controller@instansi');
 Route::post('/instansi/create_instansi','Controller@create_instansi');
 Route::get('/instansi/{id}/edit_instansi','Controller@edit_instansi');
 Route::post('/instansi/{id}/update_instansi','Controller@update_instansi');
+Route::get('/instansi/{id}/delete_instansi','Controller@delete_instansi');
+
+
 
 Route::get('/survey','Controller@survey');
 

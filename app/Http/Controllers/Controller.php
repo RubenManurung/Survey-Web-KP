@@ -36,11 +36,15 @@ class Controller extends BaseController
     public function update_instansi(Request $request, $id)
     {
       $instansi = \App\Instansi::find($id);
-      if ($instansi->id == $id) {
         $instansi->update($request->all());
-      }
-
       return redirect('/instansi')->with('sukses','Data Berhasil di Update.');
+    }
+
+    public function delete_instansi($id)
+    {
+      $instansi = \App\Instansi::find($id);
+      $instansi->delete($id);
+      return redirect('/instansi')->with('sukses','Data Berhasil Dihapus');
     }
 
     public function survey(){

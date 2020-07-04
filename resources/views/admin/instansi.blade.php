@@ -32,6 +32,9 @@
                   <td>
                     <a href="/instansi/{{$instansi['id']}}/edit_instansi"  class="btn btn-warning btn-sm">Edit</a>
                   </td>
+                  <td>
+                    <a href="/instansi/{{$instansi['id']}}/delete_instansi"  class="btn btn-danger btn-sm">Delete</a>
+                  </td>
                   </tr>
                 @endforeach
             </tbody>
