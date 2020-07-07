@@ -1,5 +1,7 @@
 @extends('layouts.masterUser')
 @section('contentUser')
+
+
   <h1>Silahkan Pilih Instansi untuk melakukan Survey.</h1>
 
   <form>
