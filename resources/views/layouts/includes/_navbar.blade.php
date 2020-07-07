@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="brand">
-      <a href="{{ url('/') }}">Survey</a>
+      <a href="{{ url('/') }}"><img src="{{ asset('admin/assets/img/kominfo_taput.jpeg') }}" width="25" alt=""> Kominfo Tapanuli Utara</a>
   </div>
   <div class="container-fluid">
     <div class="navbar-btn">
