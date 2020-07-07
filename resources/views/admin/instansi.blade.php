@@ -8,9 +8,16 @@
       @endif
       <h3 class="page-title">Instansi Kabupaten Tapanuli Utara</h3>
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary right" data-toggle="modal" data-target="#exampleModal">
   Tambah Instansi
 </button>
+
+<form class="navbar-form navbar-left" action="/instansi" method="get">
+	<div class="input-group">
+		<input name="cari" type="text" value="" class="form-control" placeholder="Cari Nama Instansi..">
+		<span class="input-group-btn"><button type="submit" class="btn btn-primary">Cari</button></span>
+	</div>
+</form>
       <!-- <button class="btn" ><a class="btn btn-primary btn-md" href="/tbhinstansi" >Tambah Instansi</a></button> -->
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -30,10 +37,10 @@
                   <td>{{$instansi['alamat']}}</td>
                   <td>{{$instansi['keterangan']}}</td>
                   <td>
-                    <a href="/instansi/{{$instansi['id']}}/edit_instansi"  class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/instansi/{{$instansi['id']}}/edit_instansi" class="btn btn-warning btn-sm">Edit</a>
                   </td>
                   <td>
-                    <a href="/instansi/{{$instansi['id']}}/delete_instansi"  class="btn btn-danger btn-sm">Delete</a>
+                    <a href="/instansi/{{$instansi['id']}}/delete_instansi" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin ingin Menghapus Data?')">Delete</a>
                   </td>
                   </tr>
                 @endforeach

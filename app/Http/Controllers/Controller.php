@@ -16,8 +16,13 @@ class Controller extends BaseController
       return view('admin.hasilSurvey');
     }
 
-    public function instansi(){
-      $dataInstansi = \App\Instansi::all();
+    public function instansi(Request $request){
+      if ($request->has('cari')) {
+        $dataInstansi = \App\Instansi::where('nama_instansi','LIKE','%'.$request->cari.'%')->get();
+      }else {
+        $dataInstansi = \App\Instansi::all();
+      }
+
       return view('admin.instansi',['dataInstansi'=>$dataInstansi]);
     }
 
