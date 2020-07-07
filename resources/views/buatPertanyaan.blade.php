@@ -3,34 +3,62 @@
 <form>
   <h1>Survey Kepuasan Masyarakat</h1>
   <hr>
-  <p>Pertanyaan 1.
-      <select name='jenisJawaban'>
+  <div class="form-group">
+      <label>Pertanyaan 1</label>
+      <input type="text" name="" class="form-control" placeholder="Masukkan Pertanyaan">
+  </div>
+
+  <div class="form-group">
+    <label>Pilih Jenis jawaban</label>
+    <select class="form-control"  name='JenisJawaban'>
         <option value='pilGanda'>Pilihan Ganda</option>
         <option value='Essai'>Essai</option>
         <option value='yaTidak'>Ya Tidak</option>
       </select>
-  </p>
-  <p>Pertanyaan 2.
-    <select name='jenisJawaban'>
-      <option value='pilGanda'>Pilihan Ganda</option>
-      <option value='Essai'>Essai</option>
-      <option value='yaTidak'>Ya Tidak</option>
-    </select>
-  </p>
-  <p>Pertanyaan 3.
-    <select name='jenisJawaban'>
-      <option value='pilGanda'>Pilihan Ganda</option>
-      <option value='Essai'>Essai</option>
-      <option value='yaTidak'>Ya Tidak</option>
-    </select>
-  </p>
-  <p>Pertanyaan 4.
-    <select name='jenisJawaban'>
-      <option value='pilGanda'>Pilihan Ganda</option>
-      <option value='Essai'>Essai</option>
-      <option value='yaTidak'>Ya Tidak</option>
-    </select>
-  </p>
-  <button type="button" name="button">Kirim</button>
+  </div>
+
+  <div class="form-group">
+      <label>Pertanyaan 2</label>
+      <input type="text" name="" class="form-control" placeholder="Masukkan Pertanyaan">
+  </div>
+
+  <div class="form-group">
+    <label>Pilih Jenis jawaban</label>
+    <select class="form-control"  name='JenisJawaban'>
+        <option value='pilGanda'>Pilihan Ganda</option>
+        <option value='Essai'>Essai</option>
+        <option value='yaTidak'>Ya Tidak</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label>Pertanyaan 3</label>
+      <input type="text" name="" class="form-control" placeholder="Masukkan Pertanyaan">
+  </div>
+
+  <div class="form-group">
+    <label>Pilih Jenis jawaban</label>
+    <select class="form-control"  name='JenisJawaban'>
+        <option value='pilGanda'>Pilihan Ganda</option>
+        <option value='Essai'>Essai</option>
+        <option value='yaTidak'>Ya Tidak</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label>Pertanyaan 4</label>
+      <input type="text" name="" class="form-control" placeholder="Masukkan Pertanyaan">
+  </div>
+
+  <div class="form-group">
+    <label>Pilih Jenis jawaban</label>
+    <select class="form-control"  name='JenisJawaban'>
+        <option value='pilGanda'>Pilihan Ganda</option>
+        <option value='Essai'>Essai</option>
+        <option value='yaTidak'>Ya Tidak</option>
+      </select>
+  </div>
+  <button type="submit" class="btn btn-primary">KIRIM</button>
+  <button type="reset" class="btn btn-danger">RESET</button>
 </form>
 @endsection
