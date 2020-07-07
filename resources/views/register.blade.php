@@ -30,26 +30,33 @@
                         <h1>Buat Akun Anda</h1>
                       </center>
                     </div>
-                    <form class="form-auth-small" action="index.php">
+                    <form class="form-auth-small" action="/register/create_register">
                       <div class="form-group">
                         <label for="NIK" class="control-label sr-only">NIK</label>
-                        <input type="text" class="form-control" id="NIK" value="" placeholder="Masukkan NIK Anda..">
+                        <input name="nik" type="text" class="form-control" id="NIK" value="" placeholder="Masukkan NIK Anda..">
                       </div>
                       <div class="form-group">
                         <label for="Nama" class="control-label sr-only">Nama</label>
-                        <input type="text" class="form-control" id="Nama" value="" placeholder="Masukkan Nama Anda..">
+                        <input name="nama_lengkap" type="text" class="form-control" id="Nama" value="" placeholder="Masukkan Nama Anda..">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                        <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+                          <option value="L">Laki-Laki</option>
+                          <option value="P">Perempuan</option>
+                        </select>
                       </div>
                       <div class="form-group">
                         <label for="noHP" class="control-label sr-only">No.Telp</label>
-                        <input type="text" class="form-control" id="noHP" value="" placeholder="Masukkan No.Telp Anda..">
+                        <input name="jenis_kelamin" type="text" class="form-control" id="noHP" value="" placeholder="Masukkan No.Telp Anda..">
                       </div>
                       <div class="form-group">
                         <label for="Pekerjaan" class="control-label sr-only">Pekerjaan</label>
-                        <input type="text" class="form-control" id="Pekerjaan" value="" placeholder="Masukkan Pekerjaan Anda..">
+                        <input name="pekerjaan" type="text" class="form-control" id="Pekerjaan" value="" placeholder="Masukkan Pekerjaan Anda..">
                       </div>
                       <div class="form-group">
                       <label for="Alamat" class="control-label sr-only">Alamat</label>
-                        <textarea class="form-control" id="Alamat" rows="3" placeholder="Masukkan Alamat Anda"></textarea>
+                        <textarea name="alamat" class="form-control" id="Alamat" rows="3" placeholder="Masukkan Alamat Anda"></textarea>
                       </div>
                       <button type="submit" class="btn btn-primary btn-lg btn-block"> <a href="/login">Daftar</a> </button>
                     </form>
