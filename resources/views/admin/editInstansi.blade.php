@@ -39,7 +39,7 @@
   <tr>
     <td>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Buat Instansi</button>
+        <button type="submit" class="btn btn-primary">Edit Instansi</button>
       </div>
 
     </td>

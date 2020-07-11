@@ -18,6 +18,8 @@
 		<span class="input-group-btn"><button type="submit" class="btn btn-primary">Cari</button></span>
 	</div>
 </form>
+
+
       <!-- <button class="btn" ><a class="btn btn-primary btn-md" href="/tbhinstansi" >Tambah Instansi</a></button> -->
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -25,14 +27,14 @@
             <th scope="col">Nama Instansi</th>
             <th scope="col">Kepala Dinas</th>
             <th scope="col">Alamat</th>
-            <th scope="col">Layanan</th>
+            <th scope="col">Keterangan</th>
             <th scope="col">Aksi</th>
           </tr>
           <thead>
             <tbody>
               <tr>
-                @foreach($dataInstansi as $instansi)
-                  <td>{{$instansi['nama_instansi']}}</td>
+                @foreach($instansi as $instansi)
+                  <td> <a href="/instansi/layanan/{{$instansi['id']}}/create_layanan">{{$instansi['nama_instansi']}}</a> </td>
                   <td>{{$instansi['nama_pimpinan']}}</td>
                   <td>{{$instansi['alamat']}}</td>
                   <td>{{$instansi['keterangan']}}</td>

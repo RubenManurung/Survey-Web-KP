@@ -30,21 +30,13 @@
                         <h1>Halaman Login </h1>
                       </center>
                     </div>
-                    <form class="form-auth-small" action="index.php">
+                    <form class="form-auth-small" action="/postlogin" method="post">
+                      {{ csrf_field() }}
                       <div class="form-group">
-                        <label for="signin-email" class="control-label sr-only">NIK</label>
-                        <input type="text" class="form-control" id="signin-email" value="Masukkan NIK Anda.." placeholder="Email">
-                      </div>
-                      <div class="form-group clearfix">
-                        <label class="fancy-checkbox element-left">
-                          <input type="checkbox">
-                          <span>Remember me</span>
-                        </label>
+                        <label for="signin-nik" class="control-label sr-only">NIK</label>
+                        <input name="nik" type="text" class="form-control" id="signin-nik" placeholder="Nik..">
                       </div>
                       <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-                      <div class="bottom">
-                        <span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
-                      </div>
                       <div class="bottom">
                         <span class="helper-text"><i class="fa fa-lock"></i> <a href="/register">Buat akun?</a></span>
                       </div>

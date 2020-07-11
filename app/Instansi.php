@@ -10,4 +10,9 @@ class Instansi extends Model
     protected $fillable = [
       'nama_instansi','nama_pimpinan','alamat','keterangan'
     ];
+    public $timestamps = false;
+
+    public function layanan(){
+      return $this->hasMany(Layanan::class);
+    }
 }

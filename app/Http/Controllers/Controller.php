@@ -7,7 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
-
+use App\Layanan;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -23,7 +23,7 @@ class Controller extends BaseController
         $dataInstansi = \App\Instansi::all();
       }
 
-      return view('admin.instansi',['dataInstansi'=>$dataInstansi]);
+      return view('admin.instansi',['instansi'=>$dataInstansi]);
     }
 
     public function create_instansi(Request $request)
@@ -48,6 +48,7 @@ class Controller extends BaseController
     public function delete_instansi($id)
     {
       $instansi = \App\Instansi::find($id);
+      $instansi->layanan()->delete();
       $instansi->delete($id);
       return redirect('/instansi')->with('sukses','Data Berhasil Dihapus');
     }
@@ -65,7 +66,8 @@ class Controller extends BaseController
     }
 
     public function layanan(){
-      return view('admin.layanan');
+      $instansi = \App\Instansi::all();
+      return view('admin.layanan',['instansi'=>$instansi]);
     }
 
     public function ubahlayanan(){
@@ -90,9 +92,7 @@ class Controller extends BaseController
 
 
 
-    public function login(){
-      return view('login');
-    }
+
 
     public function register(){
       return view('register');
