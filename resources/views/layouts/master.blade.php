@@ -20,16 +20,26 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+
+	<script src="{{ asset('admin/assets/vendor/jquery/jquery.min.js')}}"></script>
 </head>
 
 <body>
 	<!-- WRAPPER -->
-	<div id="wrapper">
+	@if(auth()->user()->role == 'admin')
+		<div id="wrapper">
+	@else
+	<div class="wrapper hidden">
+
+	</div>
+	@endif
 		<!-- NAVBAR -->
 		@include('layouts.includes._navbar')
 		<!-- END NAVBAR -->
 		<!-- LEFT SIDEBAR -->
-		@include('layouts.includes._sidebar')
+		@if(auth()->user()->role == 'admin')
+			@include('layouts.includes._sidebar')
+		@endif
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
 		<div class="main">
@@ -55,7 +65,7 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
-	<script src="{{ asset('admin/assets/vendor/jquery/jquery.min.js')}}"></script>
+
 	<script src="{{ asset('admin/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 	<script src="{{ asset('admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 	<script src="{{ asset('admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')}}"></script>

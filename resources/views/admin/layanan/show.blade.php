@@ -47,12 +47,12 @@
                {{csrf_field()}}
                <div class="form-group">
                  <label for="namaLayanan">Nama Layanan</label>
-                 <input name="nama_layanan" type="text" class="form-control" id="namaLayanan">
+                 <input name="nama_layanan" type="text" class="form-control" id="namaLayanan" required>
                </div>
 
                <div class="form-group">
                  <label for="keteranganLayanan">Keterangan Layanan</label>
-                 <textarea name="keterangan_layanan" type="text" class="form-control" id="keteranganLayanan"></textarea>
+                 <textarea name="keterangan_layanan" type="text" class="form-control" id="keteranganLayanan" required></textarea>
                </div>
 
                <div class="modal-footer">

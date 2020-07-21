@@ -15,4 +15,8 @@ class Instansi extends Model
     public function layanan(){
       return $this->hasMany(Layanan::class);
     }
+
+    public function questionnaires(){
+      return $this->hasMany(Questionnaire::class);
+    }
 }

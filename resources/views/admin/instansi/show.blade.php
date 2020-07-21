@@ -65,22 +65,22 @@
                     {{csrf_field()}}
                     <div class="form-group">
                       <label for="namaInstansi">Nama Instansi</label>
-                      <input name="nama_instansi" type="text" class="form-control" id="namaInstansi">
+                      <input name="nama_instansi" type="text" class="form-control" id="namaInstansi" required>
                     </div>
 
                     <div class="form-group">
                       <label for="namaPimpinan">Nama Pimpinan</label>
-                      <input name="nama_pimpinan" type="text" class="form-control" id="namaPimpinan">
+                      <input name="nama_pimpinan" type="text" class="form-control" id="namaPimpinan" required>
                     </div>
 
                     <div class="form-group">
                       <label for="alamat">Alamat</label>
-                      <textarea name="alamat" name="name" rows="8" cols="80"></textarea>
+                      <textarea name="alamat" name="name" rows="8" cols="80" required></textarea>
                     </div>
 
                     <div class="form-group">
                       <label for="keterangan">Keterangan Instansi</label>
-                      <textarea name="keterangan" rows="8" cols="80"></textarea>
+                      <textarea name="keterangan" rows="8" cols="80" required></textarea>
                     </div>
 
                     <div class="modal-footer">

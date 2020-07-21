@@ -16,26 +16,15 @@ class User extends Authenticatable
      * @var array
      */
 
-     protected $table = 'users';
+    protected $table = 'users';
     protected $fillable = [
-        'name', 'nik'
+        'name', 'nik','role','password','remember_token'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    // protected $hidden = [
-    //     'password', 'remember_token',
-    // ];
+    public function questionnaires(){
+      return $this->hasMany(Questionnaire::class);
+    }
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+
+
 }

@@ -12,7 +12,7 @@ class LayananController extends Controller
       $layanan = Layanan::all()->where('instansi_id','=',$id);
       $instansi = Instansi::find($id);
 
-      return view('admin.layanan',['instansi'=>$instansi,'layanans'=>$layanan]);
+      return view('admin.layanan.show',['instansi'=>$instansi,'layanans'=>$layanan]);
     }
 
 
@@ -31,7 +31,7 @@ class LayananController extends Controller
       $instansi = Instansi::all();
       $layanan = Layanan::find($id);
 
-      return view('admin.edit_layanan',['layanan'=>$layanan]);
+      return view('admin.layanan.edit_layanan',['layanan'=>$layanan]);
     }
 
     public function update_layanan(Request $request, $id){
