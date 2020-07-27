@@ -3,9 +3,9 @@
     <nav>
       <ul class="nav">
 
-        <li><a href="{{ url('/') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Hasil Survey</span></a></li>
+        <li><a href="{{ url('/survey') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Hasil Survey</span></a></li>
         <li><a href="{{ url('/instansi') }}" class=""><i class="lnr lnr-home"></i> <span>Instansi</span></a></li>
-        <li><a href="{{ url('/survey') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Survey</span></a></li>
+        <li><a href="{{ url('/') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Survey</span></a></li>
 
       </ul>
     </nav>

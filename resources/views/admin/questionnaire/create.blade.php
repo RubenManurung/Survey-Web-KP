@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-  <h1>Create Questionnaire</h1>
+  <h1>Kuesioner Baru</h1>
     <form class="" action="/questionnaires" method="post">
       @csrf
 
@@ -23,11 +23,6 @@
         <small class="text-danger">{{ $message }}</small>
         @enderror
       </div>
-      <button type="submit" class="btn btn-primary">Create Questionnaire</button>
+      <button type="submit" class="btn btn-primary">Buat Kuesioner</button>
     </form>
-
-
-
-
-
 @endsection

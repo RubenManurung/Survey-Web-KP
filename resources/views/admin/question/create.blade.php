@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-  <h1>Create New Question</h1>
+  <h1>Buat Pertanyaan.</h1>
     <form class="" action="/questionnaires/{{ $questionnaire->id }}/questions" method="post">
       @csrf
       <div class="form-group">

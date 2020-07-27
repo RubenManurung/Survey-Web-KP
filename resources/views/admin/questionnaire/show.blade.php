@@ -10,8 +10,8 @@
   <div class="row">
     <div class="col-md-12">
       <h1>{{ $questionnaire->title }}</h1>
-      <a class="btn btn-primary" href="/questionnaires/{{ $questionnaire->id }}/questions/create">Add new Question</a>
-      <a class="btn btn-primary" href="/surveys/{{ $questionnaire->id }}-{{ Str::slug($questionnaire->title) }}">Take Survey</a>
+      <a class="btn btn-primary" href="/questionnaires/{{ $questionnaire->id }}/questions/create">Buat Pertanyaan</a>
+      <a class="btn btn-primary" href="/surveys/{{ $questionnaire->id }}-{{ Str::slug($questionnaire->title) }}">Lakukan Survey</a>
     </div>
   </div>
       <?php $no=1; ?>

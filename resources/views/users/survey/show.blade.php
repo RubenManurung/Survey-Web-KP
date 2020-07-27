@@ -46,30 +46,30 @@
     </div>
     @elseif($no % 2 == 1)
     <div class="col-md-4">
-            <!-- PANEL NO CONTROLS -->
-            <div id="panel-scrolling-demo" class="panel">
-              <div class="panel-heading">
-                <h3 class="panel-title"><strong>{{$key+1}}</strong>.{{ $question->question }}</h3>
-              </div>
-              <div class="panel-body">
-                <ul class="list-group">
-                @foreach($question->answers as $answer)
-                  <label for="answer{{ $answer->id }}">
-                    <li class="list-group-item">
-                      <input type="radio" name="responses[{{ $key }}][answer_id]" {{ (old('responses.'.$key.'.answer_id') == $answer->id) ? 'checked' : '' }} value="{{ $answer->id }}" id="answer{{ $answer->id }}">
-                      {{ $answer->answer }}
-                      <input type="hidden" name="responses[{{ $key }}][question_id]" value="{{ $question->id }}">
-                    </li>
-                  </label>
-                @endforeach
-                </ul>
-                @error('responses.'.$key.'.answer_id')
-                  <small class="text-danger">{{ $message }}</small>
-                @enderror
-              </div>
-            </div>
-            <!-- END PANEL NO CONTROLS -->
-          </div>
+      <!-- PANEL NO CONTROLS -->
+      <div id="panel-scrolling-demo" class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>{{$key+1}}</strong>.{{ $question->question }}</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+          @foreach($question->answers as $answer)
+            <label for="answer{{ $answer->id }}">
+              <li class="list-group-item">
+                <input type="radio" name="responses[{{ $key }}][answer_id]" {{ (old('responses.'.$key.'.answer_id') == $answer->id) ? 'checked' : '' }} value="{{ $answer->id }}" id="answer{{ $answer->id }}">
+                {{ $answer->answer }}
+                <input type="hidden" name="responses[{{ $key }}][question_id]" value="{{ $question->id }}">
+              </li>
+            </label>
+          @endforeach
+          </ul>
+          @error('responses.'.$key.'.answer_id')
+            <small class="text-danger">{{ $message }}</small>
+          @enderror
+        </div>
+      </div>
+      <!-- END PANEL NO CONTROLS -->
+    </div>
     @endif
     @endforeach()
     <div id="panel-scrolling-demo" class="panel col-md-4">
@@ -90,7 +90,6 @@
         @error('email')
           <small class="text-dannger">{{ $message }}</small>
         @enderror
-
       </div>
     </div>
     <div class="col-md-12">

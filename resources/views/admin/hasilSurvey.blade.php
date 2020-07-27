@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('content')
-<h1>Hasil Survey Kepuasan Masyarakat</h1>
-<a href="/questionnaires/create" class="btn btn-dark">Create New Questionnaire</a>
+<h1>Daftar Survey Kepuasan Masyarakat</h1>
+<a href="/questionnaires/create" class="btn btn-dark">Buat Kuesioner Baru</a>
 
 
 <div class="panel">
-  <div class="panel-heading">My Questionnaire</div>
+  <div class="panel-heading">Daftar Quesioner</div>
   <div class="panel-body">
     <ul class="list-group">
         @foreach($questionnaires as $questionnaire)
