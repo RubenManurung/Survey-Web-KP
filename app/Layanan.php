@@ -13,4 +13,9 @@ class Layanan extends Model
     public function instansi(){
       return $this->belongsTo(Instansi::class);
     }
+
+
+    public function questionnaires(){
+      return $this->hasMany(Questionnaire::class);
+    }
 }

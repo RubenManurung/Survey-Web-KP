@@ -36,4 +36,9 @@ class Questionnaire extends Model
     public function instansi(){
       return $this->belongsTo(Instansi::class);
     }
+
+
+    public function layanan(){
+      return $this->belongsTo(Layanan::class);
+    }
 }

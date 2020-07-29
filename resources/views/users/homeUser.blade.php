@@ -1,20 +1,29 @@
 @extends('layouts.master')
 @section('content')
-  <h2> <b>Standar Kepuasan Masyarakat(SKM)</b> </h2>
-  <h1>Silahkan Pilih Instansi untuk melakukan Survey.</h1>
+<br><br>
 
-  <form>
-    <p class="p">Pilih Instansi
-      <select class="form-control" name='instansi'>
-        <option value='Instansi A'>Instansi A</option>
-        <option value='Instansi A'>Instansi B</option>
-        <option value='Instansi A'>Instansi C</option>
-        <option value='Instansi A'>Instansi D</option>
-        <option value='Instansi A'>Instansi E</option>
-      </select>
-    </p>
-    <!-- <input type='submit' name='tombol' value='next'/> -->
-    <button class="btn btn-default" type="button" name="button"><a href="{{ url('/daftarLayananUser') }}">Next</a> </button>
-  </form>
+  <h2> <b>Standar Kepuasan Masyarakat(SKM).</b> </h2>
+  <h3>Silahkan Pilih Instansi untuk melakukan Survey.</h3>
 
+  <table class="table table-dark">
+    <thead>
+      <th>No</th>
+      <th>Nama Instansi</th>
+      <th>Nama Pimpinan</th>
+      <th>Alamat</th>
+      <th>Keterangan</th>
+    </thead>
+    <tbody>
+      <tr>
+        <?php $no=1; ?>
+        @foreach($instansi as $ins)
+          <td><?= $no++; ?></td>
+          <td><a href="/homeUser/instansi/{{$ins['id']}}">{{ $ins['nama_instansi'] }}</a></td>
+          <td>{{ $ins['nama_pimpinan'] }}</td>
+          <td>{{ $ins['alamat'] }}</td>
+          <td>{{ $ins['keterangan'] }}</td>
+      </tr>
+      @endforeach
+    </tbody>
+  </table>
 @endsection

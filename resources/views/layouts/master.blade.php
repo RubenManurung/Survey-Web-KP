@@ -29,6 +29,7 @@
 	@if(auth()->user()->role == 'admin')
 		<div id="wrapper">
 	@else
+	<br><br><br>
 	<div class="wrapper hidden">
 
 	</div>
@@ -65,7 +66,6 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
-
 	<script src="{{ asset('admin/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 	<script src="{{ asset('admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 	<script src="{{ asset('admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')}}"></script>

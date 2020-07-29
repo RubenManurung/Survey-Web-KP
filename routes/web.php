@@ -21,7 +21,7 @@ Route::get('/logout','AuthController@logout');
 
 
 Route::group(['middleware' => ['auth','checkRole:admin']], function() {
-  
+
   Route::get('/','SurveyController@index');
 
   Route::get('/instansi','InstansiController@instansi');
@@ -36,22 +36,30 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function() {
   Route::post('/instansi/layanan/{id}/update_layanan','LayananController@update_layanan');
   Route::get('/instansi/layanan/{id}/delete_layanan','LayananController@delete_layanan');
 
-
+  Route::get('/findLayananName','LayananController@findLayananName');
 
   Route::get('/questionnaires/create','QuestionnaireController@create');
   Route::post('/questionnaires','QuestionnaireController@store');
   Route::get('/questionnaires/{questionnaire}','QuestionnaireController@show');
 
   Route::get('/questionnaires/{questionnaire}/questions/create','QuestionController@create');
+  Route::get('/questionnaires/{questionnaire}/questions/{question}/edit','QuestionController@edit');
+  Route::put('/questionnaires/{questionnaire}/questions/{question}/update','QuestionController@update');
   Route::post('/questionnaires/{questionnaire}/questions','QuestionController@store');
   Route::delete('/questionnaires/{questionnaire}/questions/{question}','QuestionController@destroy');
 
-  Route::get('/surveys/{questionnaire}-{slug}','SurveyController@show');
-  Route::post('/surveys/{questionnaire}-{slug}','SurveyController@store');
+
+
 
 });
 
 
 Route::group(['middleware' => ['auth','checkRole:admin,pengguna']], function() {
   Route::get('/homeUser','Controller@homeUser');
+  Route::get('/surveys/{questionnaire}-{slug}','SurveyController@show');
+  Route::post('/surveys/{questionnaire}-{slug}','SurveyController@store');
+
+  Route::get('/homeUser/instansi/{id}','SurveyController@showLayanan');
+  Route::get('/homeUser/instansi/{id}/layanan/{layananId}','SurveyController@showKuesioner');
+
 });

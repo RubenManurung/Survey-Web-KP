@@ -47,4 +47,11 @@ class LayananController extends Controller
 
       return redirect('/instansi/layanan/'.$layanan['instansi_id'].'/create_layanan')->with('sukses','Data Berhasil dihapus');
     }
+    
+
+    public function findLayananName(Request $request){
+      $data = Layanan::select("nama_layanan",'id')->where("instansi_id",$request->id)->get();
+
+      return response()->json($data);
+    }
 }

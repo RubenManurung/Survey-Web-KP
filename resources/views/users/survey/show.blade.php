@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<div class="container">
+<div class="container-fluid">
   <h1>Selamat Datang di Website Penilaian Kominfo.</h1> <br>
 
   <h3>Judul Survey : {{ $questionnaire->title }}</h3>

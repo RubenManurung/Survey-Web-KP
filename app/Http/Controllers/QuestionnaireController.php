@@ -11,10 +11,13 @@ class QuestionnaireController extends Controller
       return view('admin.questionnaire.create',compact('instansi'));
     }
 
+
     public function store(Request $request){
       $data = $request->validate([
         'title' => 'required',
         'purpose' => 'required',
+        'instansi_id' => 'required',
+        'layanan_id' => 'required'
       ]);
 
       $questionnaire = auth()->user()->questionnaires()->create($data);
@@ -26,8 +29,6 @@ class QuestionnaireController extends Controller
     public function show(\App\Questionnaire $questionnaire){
       //Lazy Loaded
       $questionnaire->load('questions.answers.responses');
-
-
 
       return view('admin.questionnaire.show',compact('questionnaire'));
     }

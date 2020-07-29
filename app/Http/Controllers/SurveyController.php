@@ -32,4 +32,16 @@ class SurveyController extends Controller
 
     return 'Thank you!';
   }
+
+  public function showLayanan($id){
+    $layanans = \App\Layanan::all()->where("instansi_id",$id);
+
+    return view("users.userLayanan",compact("layanans","id"));
+  }
+
+
+  public function showKuesioner($id, $layananId){
+    $questionnaires = Questionnaire::all()->where("layanan_id",'=',$layananId);
+    return view("users.userQuestionnaire",compact("questionnaires"));
+  }
 }

@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+
 <div class="container-fluid">
   @if(session('sukses'))
   <div class="alert alert-success" role="alert">
@@ -42,8 +43,9 @@
                   @method('DELETE')
                   @csrf
 
-                  <button type="submit" class="btn btn-sm btn-danger">Delete Question</button>
+                  <button type="submit" class="btn btn-sm btn-danger col-md-5">Hapus Pertanyaan</button>
                 </form>
+                  <a href="/questionnaires/{{ $questionnaire->id }}/questions/{{ $question->id }}/edit" class="btn btn-sm btn-warning col-md-5">Edit Pertanyaan</a>
               </div>
             </div>
             <!-- END PANEL SCROLLING -->
@@ -73,8 +75,9 @@
                     @method('DELETE')
                     @csrf
 
-                    <button type="submit" class="btn btn-sm btn-danger">Delete Question</button>
+                    <button type="submit" class="btn btn-sm btn-danger col-md-5">Hapus Pertanyaan</button>
                   </form>
+                    <a href="/questionnaires/{{ $questionnaire->id }}/questions/{{ $question->id }}/edit" class="btn btn-sm btn-warning col-md-5">Edit Pertanyaan</a>
                 </div>
 							</div>
 							<!-- END PANEL NO CONTROLS -->
