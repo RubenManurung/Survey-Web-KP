@@ -10,7 +10,8 @@ class SurveyController extends Controller
 {
   public function index(){
     $questionnaires = auth()->user()->questionnaires;
-    return view('admin.hasilSurvey', compact('questionnaires'));
+    $questionnaires->load("layanan");
+    return view('admin.listSurvey', compact('questionnaires'));
   }
 
 

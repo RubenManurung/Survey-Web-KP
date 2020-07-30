@@ -20,11 +20,36 @@ class QuestionnaireController extends Controller
         'layanan_id' => 'required',
         'due_date' => 'required|date'
       ]);
-
-
       $questionnaire = auth()->user()->questionnaires()->create($data);
-
       return redirect('/questionnaires/'.$questionnaire->id);
+    }
+
+
+    public function edit($id){
+      $questionnaire = \App\Questionnaire::find($id);
+      $questionnaire->load("instansi");
+      return view('admin.questionnaire.edit',compact('questionnaire'));
+    }
+
+
+    public function update($id){
+      $data = request()->validate([
+        'title' => 'required',
+        'purpose' => 'required',
+        'instansi_id' => 'required',
+        'layanan_id' => 'required',
+        'due_date' => 'required|date'
+      ]);
+
+      $questionnaire = \App\Questionnaire::find($id)->update([
+        'title' => $data['title'],
+        'purpose' => $data['purpose'],
+        'instansi_id' => $data['instansi_id'],
+        'layanan_id' => $data['layanan_id'],
+        'due_date' => $data['due_date']
+      ]);
+
+      return redirect('/');
     }
 
 
@@ -32,6 +57,28 @@ class QuestionnaireController extends Controller
       //Lazy Loaded
       $questionnaire->load('questions.answers.responses');
 
-      return view('admin.questionnaire.show',compact('questionnaire'));
+      $pertanyaan = [];
+      $responden = [];
+
+        foreach($questionnaire->questions as $question){
+          $pertanyaan[] = $question->question;
+          $responden[] = $question->responses->count();
+          foreach($question->answers as $answer){
+
+          }
+        }
+      return view('admin.questionnaire.show',compact('questionnaire','pertanyaan','responden'));
+    }
+
+
+    public function destroy($id){
+      $questionnaire = \App\Questionnaire::find($id);
+      $questionnaire->delete();
+
+
+      // $question->answers()->delete();
+      // $question->delete();
+
+      return redirect("/")->with("sukses","Kuesioner berhasil di hapus.");
     }
 }

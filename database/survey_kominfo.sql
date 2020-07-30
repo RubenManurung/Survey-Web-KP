@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2020 at 04:44 AM
+-- Generation Time: Jul 30, 2020 at 05:36 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -40,22 +40,30 @@ CREATE TABLE `answers` (
 --
 
 INSERT INTO `answers` (`id`, `question_id`, `answer`, `created_at`, `updated_at`) VALUES
-(121, 30, '1', '2020-07-29 13:29:29', '2020-07-29 13:29:29'),
-(122, 30, '2', '2020-07-29 13:29:29', '2020-07-29 13:29:29'),
-(123, 30, '3', '2020-07-29 13:29:29', '2020-07-29 13:29:29'),
-(124, 30, '4', '2020-07-29 13:29:29', '2020-07-29 13:29:29'),
-(125, 31, '1a', '2020-07-29 13:29:49', '2020-07-29 19:13:40'),
-(126, 31, '2b', '2020-07-29 13:29:49', '2020-07-29 13:29:49'),
-(127, 31, '3c', '2020-07-29 13:29:49', '2020-07-29 19:13:40'),
-(128, 31, '4d', '2020-07-29 13:29:49', '2020-07-29 19:13:40'),
-(129, 32, 'asd', '2020-07-29 19:14:53', '2020-07-29 19:14:53'),
-(130, 32, 'sad', '2020-07-29 19:14:54', '2020-07-29 19:14:54'),
-(131, 32, 'dsad', '2020-07-29 19:14:54', '2020-07-29 19:14:54'),
-(132, 32, 'dsad', '2020-07-29 19:14:54', '2020-07-29 19:14:54'),
-(133, 33, 'asda', '2020-07-29 19:15:01', '2020-07-29 19:15:01'),
-(134, 33, 'sad', '2020-07-29 19:15:01', '2020-07-29 19:15:01'),
-(135, 33, 'sad', '2020-07-29 19:15:01', '2020-07-29 19:15:01'),
-(136, 33, 'sad', '2020-07-29 19:15:01', '2020-07-29 19:15:01');
+(173, 43, '1', '2020-07-30 08:32:18', '2020-07-30 08:32:18'),
+(174, 43, '2', '2020-07-30 08:32:18', '2020-07-30 08:32:18'),
+(175, 43, '3', '2020-07-30 08:32:18', '2020-07-30 08:32:18'),
+(176, 43, '4', '2020-07-30 08:32:18', '2020-07-30 08:32:18'),
+(177, 44, '2a', '2020-07-30 08:32:34', '2020-07-30 08:32:34'),
+(178, 44, '2b', '2020-07-30 08:32:34', '2020-07-30 08:32:34'),
+(179, 44, '2c', '2020-07-30 08:32:34', '2020-07-30 08:32:34'),
+(180, 44, '2d', '2020-07-30 08:32:34', '2020-07-30 08:32:34'),
+(181, 45, 'a', '2020-07-30 08:33:20', '2020-07-30 08:33:20'),
+(182, 45, 'b', '2020-07-30 08:33:20', '2020-07-30 08:33:20'),
+(183, 45, 'c', '2020-07-30 08:33:20', '2020-07-30 08:33:20'),
+(184, 45, 'd', '2020-07-30 08:33:20', '2020-07-30 08:33:20'),
+(185, 46, '1b', '2020-07-30 08:33:40', '2020-07-30 08:33:40'),
+(186, 46, '2b', '2020-07-30 08:33:40', '2020-07-30 08:33:40'),
+(187, 46, '3b', '2020-07-30 08:33:40', '2020-07-30 08:33:40'),
+(188, 46, '4b', '2020-07-30 08:33:40', '2020-07-30 08:33:40'),
+(189, 47, '0', '2020-07-30 08:34:21', '2020-07-30 08:34:21'),
+(190, 47, '50', '2020-07-30 08:34:21', '2020-07-30 08:34:21'),
+(191, 47, '75', '2020-07-30 08:34:21', '2020-07-30 08:34:21'),
+(192, 47, '100', '2020-07-30 08:34:21', '2020-07-30 08:34:21'),
+(193, 48, 'Sangat Baik', '2020-07-30 08:34:52', '2020-07-30 08:34:52'),
+(194, 48, 'Baik', '2020-07-30 08:34:52', '2020-07-30 08:34:52'),
+(195, 48, 'Buruk', '2020-07-30 08:34:52', '2020-07-30 08:34:52'),
+(196, 48, 'Sangat Buruk', '2020-07-30 08:34:52', '2020-07-30 08:34:52');
 
 -- --------------------------------------------------------
 
@@ -116,7 +124,10 @@ INSERT INTO `layanan` (`id`, `instansi_id`, `nama_layanan`, `keterangan_layanan`
 (41, 11, 'Layanan Kominfo 1', 'Keterangan Layanan Kominfo 1'),
 (44, 11, 'Layanan Kominfo 2', 'Keterangan Layanan Kominfo 2'),
 (45, 14, 'Layanan Kemendikbud 1', 'Keterangan  Layanan Kemendikbud 1'),
-(47, 11, 'Layanan Kominfo 3', 'Keterangan Layanan Kominfo 3');
+(47, 11, 'Layanan Kominfo 3', 'Keterangan Layanan Kominfo 3'),
+(49, 15, 'Layanan KemenPariwisata 1', 'Keterangan Layanan KemenPariwisata 1'),
+(50, 15, 'Layanan KemenPariwisata 2', 'Keterangan Layanan KemenPariwisata 2'),
+(51, 14, 'Layanan Kemendikbud 2', 'Keterangan Layanan Kemendikbud 2');
 
 -- --------------------------------------------------------
 
@@ -183,8 +194,9 @@ CREATE TABLE `questionnaires` (
 --
 
 INSERT INTO `questionnaires` (`id`, `user_id`, `instansi_id`, `layanan_id`, `title`, `purpose`, `created_at`, `updated_at`, `due_date`) VALUES
-(15, 6, 11, 41, 'Quesioner A', 'Tujuan A', '2020-07-29 13:29:18', '2020-07-29 13:29:18', '2020-07-31'),
-(16, 6, 14, 45, 'Test Questionnaire', 'Tujuan Test', '2020-07-29 19:14:43', '2020-07-29 19:14:43', '2020-07-29');
+(29, 6, 11, 41, 'Kuesioner 1?', 'Tujuan 1', '2020-07-30 08:32:05', '2020-07-30 08:32:05', '2020-07-31'),
+(30, 6, 14, 45, 'Kuesioner 2', 'Tujuan Kues 2', '2020-07-30 08:33:00', '2020-07-30 08:33:00', '2020-07-31'),
+(31, 6, 15, 49, 'Kuesioner 3', 'Tujuan 3', '2020-07-30 08:34:05', '2020-07-30 08:34:05', '2020-07-31');
 
 -- --------------------------------------------------------
 
@@ -205,10 +217,12 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `questionnaire_id`, `question`, `created_at`, `updated_at`) VALUES
-(30, 15, 'Pertanyaan 1?', '2020-07-29 13:29:29', '2020-07-29 13:29:29'),
-(31, 15, 'Pertanyaan 2?', '2020-07-29 13:29:49', '2020-07-29 13:29:49'),
-(32, 16, 'Test 1?', '2020-07-29 19:14:53', '2020-07-29 19:14:53'),
-(33, 16, 'asdas?', '2020-07-29 19:15:01', '2020-07-29 19:15:01');
+(43, 29, 'Pertanyaan 1?', '2020-07-30 08:32:18', '2020-07-30 08:32:18'),
+(44, 29, 'Pertanyaan 2?', '2020-07-30 08:32:34', '2020-07-30 08:32:34'),
+(45, 30, 'Pertanyaan a?', '2020-07-30 08:33:20', '2020-07-30 08:33:20'),
+(46, 30, 'Pertanyaan b?', '2020-07-30 08:33:40', '2020-07-30 08:33:40'),
+(47, 31, 'Pertanyaan 3.1?', '2020-07-30 08:34:21', '2020-07-30 08:34:21'),
+(48, 31, 'Pertanyaan 3.2?', '2020-07-30 08:34:52', '2020-07-30 08:34:52');
 
 -- --------------------------------------------------------
 
@@ -230,10 +244,9 @@ CREATE TABLE `surveys` (
 --
 
 INSERT INTO `surveys` (`id`, `questionnaire_id`, `name`, `email`, `created_at`, `updated_at`) VALUES
-(7, 15, 'jona', 'jona@gmail.com', '2020-07-29 13:44:31', '2020-07-29 13:44:31'),
-(8, 15, 'dayani', 'dayani@gmail.com', '2020-07-29 13:46:17', '2020-07-29 13:46:17'),
-(9, 15, 'Fenny', 'fenny@gmail.com', '2020-07-29 13:48:55', '2020-07-29 13:48:55'),
-(10, 15, 'david', 'david@gmail.com', '2020-07-29 19:24:16', '2020-07-29 19:24:16');
+(18, 29, 'david', 'david@gmail.com', '2020-07-30 08:35:34', '2020-07-30 08:35:34'),
+(19, 30, 'david', 'david@gmail.com', '2020-07-30 08:35:45', '2020-07-30 08:35:45'),
+(20, 31, 'david', 'david@gmail.com', '2020-07-30 08:35:56', '2020-07-30 08:35:56');
 
 -- --------------------------------------------------------
 
@@ -255,14 +268,12 @@ CREATE TABLE `survey_responses` (
 --
 
 INSERT INTO `survey_responses` (`id`, `question_id`, `survey_id`, `answer_id`, `created_at`, `updated_at`) VALUES
-(18, 30, 7, 124, '2020-07-29 13:44:31', '2020-07-29 13:44:31'),
-(19, 31, 7, 128, '2020-07-29 13:44:31', '2020-07-29 13:44:31'),
-(20, 30, 8, 123, '2020-07-29 13:46:17', '2020-07-29 13:46:17'),
-(21, 31, 8, 127, '2020-07-29 13:46:17', '2020-07-29 13:46:17'),
-(22, 30, 9, 122, '2020-07-29 13:48:55', '2020-07-29 13:48:55'),
-(23, 31, 9, 126, '2020-07-29 13:48:55', '2020-07-29 13:48:55'),
-(24, 30, 10, 121, '2020-07-29 19:24:16', '2020-07-29 19:24:16'),
-(25, 31, 10, 125, '2020-07-29 19:24:16', '2020-07-29 19:24:16');
+(37, 43, 18, 173, '2020-07-30 08:35:34', '2020-07-30 08:35:34'),
+(38, 44, 18, 177, '2020-07-30 08:35:34', '2020-07-30 08:35:34'),
+(39, 45, 19, 181, '2020-07-30 08:35:45', '2020-07-30 08:35:45'),
+(40, 46, 19, 185, '2020-07-30 08:35:45', '2020-07-30 08:35:45'),
+(41, 47, 20, 189, '2020-07-30 08:35:56', '2020-07-30 08:35:56'),
+(42, 48, 20, 193, '2020-07-30 08:35:56', '2020-07-30 08:35:56');
 
 -- --------------------------------------------------------
 
@@ -286,12 +297,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `nik`, `role`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(6, 'Ruben', '123123123123', 'admin', '$2y$10$nHXY6BH4r7aiSPgiWqNp/uxG7ALwVTumV63EzfN0PC40i/U97ResO', 'qUHLSaSSPXPJg5ioijXVsDptFbtxgRb08woAV0FOw0f8FvkNDv9meIYPH8ya', '2020-07-30 02:25:28', '2020-07-12'),
-(14, 'david', '12345678912345678', 'pengguna', '$2y$10$Qr3dVeNBcavXUafGwDCZCuctKekCMZJd4kO7gMOLDLXtPldJnFh1u', 'c6x2lHIR1yuxsxhZrAlLJ5oGVlDR8aKwkVl0mIcdCdZJi0Svdq4LbfVeU5jT', '2020-07-30 02:24:23', '2020-07-15'),
-(17, 'dayani', '4455687867867', 'pengguna', '$2y$10$f0a52RuNYMAY64UREXZfM.AJUed2oR.VV9wy4v2sySgAMAMTrDUxq', 'AINUyNbYtIGWgT0K8Kh5mkHzvYa3To8i8rAZWJW09V7k3ti2YxePlq3AXYaa', '2020-07-29 20:48:21', '2020-07-15'),
+(6, 'Ruben', '123123123123', 'admin', '$2y$10$nHXY6BH4r7aiSPgiWqNp/uxG7ALwVTumV63EzfN0PC40i/U97ResO', 'FEKgvbCPli3dBO83yLvgeWfDof8iLIoKQCA36KTuiwHE6TMs25i2XwJ8JSI4', '2020-07-30 15:35:02', '2020-07-12'),
+(14, 'david', '12345678912345678', 'pengguna', '$2y$10$Qr3dVeNBcavXUafGwDCZCuctKekCMZJd4kO7gMOLDLXtPldJnFh1u', 'ckZzQbLsNnPkFeDL1q35IVGJhIKRMHTgUrUhTIAV2YLb48E2eYL1Xck1HF18', '2020-07-30 15:35:58', '2020-07-15'),
+(17, 'dayani', '4455687867867', 'pengguna', '$2y$10$f0a52RuNYMAY64UREXZfM.AJUed2oR.VV9wy4v2sySgAMAMTrDUxq', '5Rrsw8biGquMjiNhJZxzoEZOHNxsq4hzdkxxLnF3ObGhBVpxX2YBBohmDtou', '2020-07-30 06:26:48', '2020-07-15'),
 (22, 'Fenny', '12312312312312312', 'pengguna', '$2y$10$lVnh8qD6AIELanlgXY5Sg.AjVkn8aDX4evFLyKfXAdRQ150XI0G8S', 'Rn1ka9ahKhoPFnW4v9t830bZrJ8763mNJMUkI2uIOkDXhEm0bNsvdjCLdVXF', '2020-07-15 15:40:55', '2020-07-15'),
-(23, 'jona', '313123143242343241', 'pengguna', '$2y$10$3eJ9fyr0/ZNupI6Wt3N7yusnQq/v2dIvc797x7zpjF9SxM2SY9l/6', 'fTEjSjpTOhF3rDHeZffGQTYbJFx7KAnkv85G6shPdVttUtEAq09liWLXQIT4', '2020-07-29 20:45:47', '2020-07-26'),
-(24, 'amsal', '1112223331231231231231231312', 'pengguna', '$2y$10$9Yr9vCRJd7u1CGUogFA.5OfGEjNHnUdA9TJeWyynYKI/3.8mY0GQS', 'UB0erjwIjjkjPHEvogwHXP1tfPX4yJ6OL6in4Ywco1uMYKJ9kO38CZg4Zfru', '2020-07-27 10:37:22', '2020-07-27');
+(23, 'jona', '313123143242343241', 'pengguna', '$2y$10$3eJ9fyr0/ZNupI6Wt3N7yusnQq/v2dIvc797x7zpjF9SxM2SY9l/6', 'ulRBeu3V074PGEMU9xcsmFya58HwCNogRqmLVMp9KAJQ5dPHf8BX2zhasJFJ', '2020-07-30 06:18:02', '2020-07-26'),
+(24, 'amsal', '1112223331231231231231231312', 'pengguna', '$2y$10$9Yr9vCRJd7u1CGUogFA.5OfGEjNHnUdA9TJeWyynYKI/3.8mY0GQS', 'rQEapyiCWavjQ1ay5ZHAS3aQGeDjIiOXYSl7vJPpOx3l1pR7tmgJVCv3wEjx', '2020-07-30 06:18:31', '2020-07-27');
 
 --
 -- Indexes for dumped tables
@@ -371,7 +382,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -389,7 +400,7 @@ ALTER TABLE `instansi`
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -401,25 +412,25 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `questionnaires`
 --
 ALTER TABLE `questionnaires`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `surveys`
 --
 ALTER TABLE `surveys`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `survey_responses`
 --
 ALTER TABLE `survey_responses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `users`

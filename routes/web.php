@@ -39,8 +39,11 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function() {
   Route::get('/findLayananName','LayananController@findLayananName');
 
   Route::get('/questionnaires/create','QuestionnaireController@create');
+  Route::get('/questionnaires/edit/{id}','QuestionnaireController@edit');
+  Route::post('/questionnaires/{id}','QuestionnaireController@update');
   Route::post('/questionnaires','QuestionnaireController@store');
   Route::get('/questionnaires/{questionnaire}','QuestionnaireController@show');
+  Route::delete('/questionnaires/{questionnaire}','QuestionnaireController@destroy');
 
   Route::get('/questionnaires/{questionnaire}/questions/create','QuestionController@create');
   Route::get('/questionnaires/{questionnaire}/questions/{question}/edit','QuestionController@edit');
@@ -56,6 +59,8 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function() {
 
 Route::group(['middleware' => ['auth','checkRole:admin,pengguna']], function() {
   Route::get('/homeUser','Controller@homeUser');
+
+
   Route::get('/surveys/{questionnaire}-{slug}','SurveyController@show');
   Route::post('/surveys/{questionnaire}-{slug}','SurveyController@store');
 
