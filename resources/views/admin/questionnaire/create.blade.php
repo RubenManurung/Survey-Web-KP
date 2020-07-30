@@ -6,7 +6,7 @@
 
       <div class="form-group">
         <label for="title">Judul</label>
-        <input name="title" type="text" id="title" class="form-control" placeholder="Masukkan Judul">
+        <input name="title" type="text" value="{{ old('title')}}" id="title" class="form-control" placeholder="Masukkan Judul">
         <small id="titleHelp" class="form-text text-muted">Buat judul Kuesioner yang menarik.</small>
 
         @error('title')
@@ -73,16 +73,22 @@
             });
           });
         </script>
+      </div>
 
+      <div class="form-group">
+        <label for="date">Tanggal Berakhir</label>
+        <input name="due_date" value="{{ old('due_date')}}" type="date" class="form-control">
+        <small id="dateHelp" class="form-text-muted">Tanggal Berakhir Kuesioner.</small>
 
-
-
+        @error('due_date')
+        <small class="text-danger">{{ $message }}</small>
+        @enderror
       </div>
 
 
       <div class="form-group">
         <label for="purpose">Tujuan</label>
-        <input name="purpose" type="text" id="purpose" class="form-control" placeholder="Masukkan Tujuan">
+        <input name="purpose" type="text" value="{{ old('purpose') }}" id="purpose" class="form-control" placeholder="Masukkan Tujuan">
         <small id="purposeHelp" class="form-text text-muted">Buat Tujuan Kuesioner yang akan meningkatkan respon.</small>
 
         @error('purpose')

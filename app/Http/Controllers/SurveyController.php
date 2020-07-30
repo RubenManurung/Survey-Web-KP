@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Questionnaire;
+use Carbon;
 
 class SurveyController extends Controller
 {
@@ -14,12 +15,13 @@ class SurveyController extends Controller
 
 
   public function show(Questionnaire $questionnaire, $slug){
+    $datetime = Carbon\Carbon::now();
+
     $questionnaire->load('questions.answers');
-    return view('users.survey.show',compact('questionnaire'));
+    return view('users.survey.show',compact('questionnaire','datetime'));
   }
 
   public function store(Questionnaire $questionnaire){
-    // dd(request()->all());
     $data = request()->validate([
       'responses.*.answer_id' => 'required',
       'responses.*.question_id' => 'required',
@@ -30,13 +32,14 @@ class SurveyController extends Controller
     $survey = $questionnaire->surveys()->create($data['survey']);
     $survey->responses()->createMany($data['responses']);
 
-    return 'Thank you!';
+    return redirect('/homeUser')->with("sukses","Tanggapan Anda telah kami terima.Terimakasih Telah Melakukan Survey.");
   }
 
   public function showLayanan($id){
+    $instansi = \App\Instansi::all()->where("id",$id);
     $layanans = \App\Layanan::all()->where("instansi_id",$id);
 
-    return view("users.userLayanan",compact("layanans","id"));
+    return view("users.userLayanan",compact("layanans","instansi","id"));
   }
 
 

@@ -1,6 +1,11 @@
 @extends('layouts.master')
 @section('content')
 <br><br>
+<h2>Instansi
+  @foreach($instansi as $ins)
+    {{$ins['nama_instansi']}}
+  @endforeach
+</h2>
 <h3>Silahkan Pilih Layanan.</h3>
 
 <table class="table table-dark">

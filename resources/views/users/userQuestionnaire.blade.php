@@ -2,7 +2,9 @@
 @section('content')
 <br><br>
 
-<h2> <b>Standar Kepuasan Masyarakat(SKM).</b> </h2>
+<h2>Layanan
+
+</h2>
 <h3>Silahkan Pilih Survey.</h3>
 
 

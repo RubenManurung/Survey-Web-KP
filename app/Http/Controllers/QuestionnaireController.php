@@ -17,8 +17,10 @@ class QuestionnaireController extends Controller
         'title' => 'required',
         'purpose' => 'required',
         'instansi_id' => 'required',
-        'layanan_id' => 'required'
+        'layanan_id' => 'required',
+        'due_date' => 'required|date'
       ]);
+
 
       $questionnaire = auth()->user()->questionnaires()->create($data);
 
