@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\SurveyResponseExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class QuestionnaireController extends Controller
 {
@@ -80,5 +82,9 @@ class QuestionnaireController extends Controller
       // $question->delete();
 
       return redirect("/")->with("sukses","Kuesioner berhasil di hapus.");
+    }
+    public function export() 
+    {
+        return Excel::download(new SurveyResponseExport, 'SurveyResponse.xlsx');
     }
 }

@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function() {
   Route::post('/questionnaires','QuestionnaireController@store');
   Route::get('/questionnaires/{questionnaire}','QuestionnaireController@show');
   Route::delete('/questionnaires/{questionnaire}','QuestionnaireController@destroy');
+  Route::get("questionnaires/{questionnaire}/export",'QuestionnaireController@export');
 
   Route::get('/questionnaires/{questionnaire}/questions/create','QuestionController@create');
   Route::get('/questionnaires/{questionnaire}/questions/{question}/edit','QuestionController@edit');
