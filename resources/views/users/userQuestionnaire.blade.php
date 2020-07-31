@@ -18,8 +18,18 @@
       <tr>
         <?php $no=1; ?>
           @foreach($questionnaires as $questionnaire)
+
             <td><?= $no++; ?></td>
+            <?php
+            $questionnaire->load("surveys");
+             ?>
+
+            <!-- @if($questionnaire->surveys()->where('name',auth()->user()->name)->first()->name == auth()->user()->name) -->
             <td> <a href="{{$questionnaire->publicPath()}}">{{$questionnaire['title']}}</a> </td>
+              <!-- <td> <a href="{{$questionnaire->publicPath()}}" class="btn disabled">{{$questionnaire['title']}}</a> </td>
+            @else
+
+            @endif -->
             <td>{{$questionnaire['purpose']}}</td>
         </tr>
           @endforeach
