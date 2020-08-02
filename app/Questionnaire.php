@@ -41,4 +41,39 @@ class Questionnaire extends Model
     public function layanan(){
       return $this->belongsTo(Layanan::class);
     }
+
+
+    public function jumlahResponse(){
+      foreach($this->questions as $question){
+
+        return $question->responses()->count();
+
+      }
+    }
+
+
+    public function questionnaireQuestionAnswers(){
+      $a = [];
+      foreach ($this->questions as $question) {
+        foreach ($question->answers as $answer) {
+          $a[] =  intval($answer->responses->count() * 100 / $question->responses->count());
+        }
+      }
+      return $a;
+    }
+
+
+    public function questionnaireName(){
+      return $this->title;
+    }
+
+
+    public function questionnaireQuestion(){
+      $ques = [];
+      foreach ($this->questions as $question) {
+        $ques[] = $question->question;
+      }
+
+      return json_encode($ques);
+    }
 }

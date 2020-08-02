@@ -24,12 +24,9 @@
             $questionnaire->load("surveys");
              ?>
 
-            <!-- @if($questionnaire->surveys()->where('name',auth()->user()->name)->first()->name == auth()->user()->name) -->
-            <td> <a href="{{$questionnaire->publicPath()}}">{{$questionnaire['title']}}</a> </td>
-              <!-- <td> <a href="{{$questionnaire->publicPath()}}" class="btn disabled">{{$questionnaire['title']}}</a> </td>
-            @else
 
-            @endif -->
+            <td> <a href="{{$questionnaire->publicPath()}}">{{$questionnaire['title']}}</a> </td>
+            
             <td>{{$questionnaire['purpose']}}</td>
         </tr>
           @endforeach

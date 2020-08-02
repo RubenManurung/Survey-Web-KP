@@ -3,7 +3,12 @@
 <div class="container-fluid">
   <h1>Selamat Datang di Website Penilaian Kominfo.</h1> <br>
 
-  <h3>Judul Survey : {{ $questionnaire->title }}</h3>
+<div class="container">
+  <div class="row-md-5">
+    <h3>Judul Survey : {{ $questionnaire->title }}</h3>
+
+  </div>
+</div>
 
   <!-- {{$datetime}} -->
 
@@ -93,7 +98,13 @@
           <small class="text-danger">{{ $message }}</small>
         @enderror
       </div>
+
+      <div class="form-group">
+        <label for="">Saran</label>
+        <textarea type="text" name="survey[saran]" class="form-control"></textarea>
+      </div>
     </div>
+
     <div class="col-md-12">
       <div class="panel-body">
         @if($questionnaire->due_date <= $datetime)

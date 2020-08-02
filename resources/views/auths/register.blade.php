@@ -62,7 +62,7 @@
 
                       <div class="form-group">
                         <label for="signin-password" class="control-label sr-only">Password</label>
-                        <input name="password" type="password" class="form-control" id="signin-password" value="{{ old('password')}}" placeholder="Masukkan Password..">
+                        <input name="password" type="password" class="form-control" id="signin-password" placeholder="Masukkan Password..">
 
                         @if ($errors->has('password'))
                                     <span class="help-block">
@@ -73,7 +73,7 @@
 
                       <div class="form-group">
                         <label for="signin-password" class="control-label sr-only">Confirm Password</label>
-                        <input name="confirm_password" type="password" class="form-control" id="signin-password" value="{{ old('confirm_password')}}" placeholder="Masukkan Ulang Password..">
+                        <input name="confirm_password" type="password" class="form-control" id="signin-password" placeholder="Masukkan Ulang Password..">
 
                         @if ($errors->has('confirm_password'))
                                     <span class="help-block">

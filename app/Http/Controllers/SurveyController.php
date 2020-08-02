@@ -11,6 +11,7 @@ class SurveyController extends Controller
   public function index(){
     $questionnaires = auth()->user()->questionnaires;
     $questionnaires->load("layanan");
+    
     return view('admin.listSurvey', compact('questionnaires'));
   }
 
@@ -28,6 +29,7 @@ class SurveyController extends Controller
       'responses.*.question_id' => 'required',
       'survey.name' => 'required',
       'survey.email' => 'required|email',
+      'survey.saran' => 'required'
     ]);
 
     $survey = $questionnaire->surveys()->create($data['survey']);

@@ -10,21 +10,25 @@
   <h3 class="page-title">Instansi Kabupaten Tapanuli Utara</h3>
 </div>
 
-<div class="col-md-6">
-  <form class="navbar-form navbar-left" action="/instansi" method="get">
-    <div class="input-group">
-      <input name="cari" type="text" class="form-control" placeholder="Cari Nama Instansi..">
-      <span class="input-group-btn"><button type="submit" class="btn btn-primary">Cari</button></span>
-    </div>
-  </form>
-</div>
 
-<div class="col-md-6">
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary right" data-toggle="modal" data-target="#exampleModal">
-    Tambah Instansi
-  </button>
-</div>
+  <div class="col-md-12">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Tambah Instansi
+    </button>
+  </div>
+
+  <div class="col-md-6" style="position:relative; top:5px;">
+    <form class="form-group" action="/instansi" method="get">
+      <div class="input-group">
+        <input name="cari" type="text" class="form-control" placeholder="Cari Nama Instansi..">
+        <span class="input-group-btn"><button type="submit" class="btn btn-primary">Cari</button></span>
+      </div>
+    </form>
+  </div>
+
+
+
 
 
 

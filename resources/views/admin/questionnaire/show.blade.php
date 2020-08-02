@@ -13,7 +13,7 @@
       <h1>{{ $questionnaire->title }}</h1>
       <a class="btn btn-primary" href="/questionnaires/{{ $questionnaire->id }}/questions/create">Buat Pertanyaan</a>
       <a class="btn btn-primary" href="/surveys/{{ $questionnaire->id }}-{{ Str::slug($questionnaire->title) }}">Lakukan Survey</a>
-      <a class="btn btn-primary" href="questionnaires/export">Export</a>
+      <a class="btn btn-primary" href="/questionnaires/{{$questionnaire->id}}/export">Export</a>
     </div>
   </div>
 
@@ -87,7 +87,7 @@
 					</div>
 
           <div class="panel-footer">
-            <form action="/questionnaires/{{ $questionnaire->id }}" method="post">
+            <form action="/questionnaires/{{ $questionnaire->id }}/questions/{{ $question->id }}" method="post">
               @method('DELETE')
               @csrf
 

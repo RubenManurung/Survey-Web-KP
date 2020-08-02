@@ -10,6 +10,9 @@
 @endif
 
 
+
+
+
 <div class="panel">
   <div class="panel-heading">Daftar Kuesioner</div>
   <div class="panel-body">
@@ -26,6 +29,20 @@
             <div class="mt-2">
               <small>Tujuan : {{ $questionnaire->purpose }}</small>
             </div>
+            <div class="mt-2">
+              <small>Tanggal Berakhir : <b class="text-success">{{ $questionnaire->due_date }}</b></small>
+            </div>
+
+            <?php
+
+            $tanggal1 = new DateTime($questionnaire->due_date);
+            $tanggal2 = new DateTime();
+
+            $perbedaan = $tanggal2->diff($tanggal1)->format("%a");
+
+
+             ?>
+            <small class="text-danger" style="position:absolute; background: #ddd;bottom:0; right:0;">Sisa {{$perbedaan}} Hari lagi</small>
             <div class="mt-2">
               <small> <b>Share Url</b> </small>
               <p>
@@ -49,24 +66,4 @@
       @endforeach
     </div>
 </div>
-
-
-<!-- <table class="table table-dark">
-  <thead>
-    <th>Nama Instansi</th>
-    <th>Jumlah Responden</th>
-    <th>Action</th>
-  </thead>
-  <tbody>
-    @for($i = 0; $i < 5; $i++)
-    <tr>
-      <td>Kominfo</td>
-      <td>80</td>
-      <td> <a href="{{ url('/chart') }}">Lihat Grafik</a> </td>
-    </tr>
-    @endfor
-  </tbody>
-</table> -->
-
-
 @endsection

@@ -83,7 +83,7 @@ class QuestionnaireController extends Controller
 
       return redirect("/")->with("sukses","Kuesioner berhasil di hapus.");
     }
-    public function export() 
+    public function export($id)
     {
         return Excel::download(new SurveyResponseExport, 'SurveyResponse.xlsx');
     }
