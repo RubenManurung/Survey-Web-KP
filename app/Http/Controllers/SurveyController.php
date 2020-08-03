@@ -11,7 +11,7 @@ class SurveyController extends Controller
   public function index(){
     $questionnaires = auth()->user()->questionnaires;
     $questionnaires->load("layanan");
-    
+
     return view('admin.listSurvey', compact('questionnaires'));
   }
 
@@ -49,5 +49,13 @@ class SurveyController extends Controller
   public function showKuesioner($id, $layananId){
     $questionnaires = Questionnaire::all()->where("layanan_id",'=',$layananId);
     return view("users.userQuestionnaire",compact("questionnaires"));
+  }
+
+
+  public function hasilSurvey(){
+    $questionnaires = auth()->user()->questionnaires;
+    $questionnaires->load("layanan");
+
+    return view('admin.hasilSurvey', compact('questionnaires'));
   }
 }

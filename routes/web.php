@@ -44,7 +44,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function() {
   Route::post('/questionnaires','QuestionnaireController@store');
   Route::get('/questionnaires/{questionnaire}','QuestionnaireController@show');
   Route::delete('/questionnaires/{questionnaire}','QuestionnaireController@destroy');
-  Route::get("questionnaires/{questionnaire}/export/",'QuestionnaireController@export');
+  Route::get("/questionnaires/{questionnaire}/export/",'QuestionnaireController@export');
 
   Route::get('/questionnaires/{questionnaire}/questions/create','QuestionController@create');
   Route::get('/questionnaires/{questionnaire}/questions/{question}/edit','QuestionController@edit');
@@ -52,7 +52,9 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function() {
   Route::post('/questionnaires/{questionnaire}/questions','QuestionController@store');
   Route::delete('/questionnaires/{questionnaire}/questions/{question}','QuestionController@destroyQuestion');
 
+  Route::get('/questionnaires/{questionnaire}/exportPDF','QuestionnaireController@exportPDF');
 
+  Route::get('hasilSurvey','SurveyController@hasilSurvey');
 
 
 });

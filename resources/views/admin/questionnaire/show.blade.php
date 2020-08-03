@@ -13,7 +13,8 @@
       <h1>{{ $questionnaire->title }}</h1>
       <a class="btn btn-primary" href="/questionnaires/{{ $questionnaire->id }}/questions/create">Buat Pertanyaan</a>
       <a class="btn btn-primary" href="/surveys/{{ $questionnaire->id }}-{{ Str::slug($questionnaire->title) }}">Lakukan Survey</a>
-      <a class="btn btn-primary" href="/questionnaires/{{$questionnaire->id}}/export">Export</a>
+      <a class="btn btn-primary" href="/questionnaires/{{$questionnaire->id}}/export">Export Excel</a>
+      <a class="btn btn-primary" href="/questionnaires/{{$questionnaire->id}}/exportPDF">Export PDF</a>
     </div>
   </div>
 
@@ -44,7 +45,7 @@
                           </div>
                         </li>
                       @endforeach
-                      <!-- <div class="">{{ $question->responses->count() }} orang</div> Jumlah Orang yang melakukkan Survey  -->
+                      <div class="">{{ $question->responses->count() }} orang</div> <!-- Jumlah Orang yang melakukkan Survey -->
                     </ul>
                   </div>
               <div class="panel-footer">
