@@ -56,7 +56,9 @@ class Questionnaire extends Model
       $a = [];
       foreach ($this->questions as $question) {
         foreach ($question->answers as $answer) {
+          if($question->responses->count()){
           $a[] =  intval($answer->responses->count() * 100 / $question->responses->count());
+          }
         }
       }
       return $a;
