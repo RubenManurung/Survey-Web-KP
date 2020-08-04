@@ -13,7 +13,7 @@
       <h1>{{ $questionnaire->title }}</h1>
       <a class="btn btn-primary" href="/questionnaires/{{ $questionnaire->id }}/questions/create">Buat Pertanyaan</a>
       <a class="btn btn-primary" href="/surveys/{{ $questionnaire->id }}-{{ Str::slug($questionnaire->title) }}">Lakukan Survey</a>
-      <a class="btn btn-primary" href="/questionnaires/{{$questionnaire->id}}/export">Export Excel</a>
+      <a class="btn btn-primary hidden" href="/questionnaires/{{$questionnaire->id}}/export">Export Excel</a>
       <a class="btn btn-primary" href="/questionnaires/{{$questionnaire->id}}/exportPDF">Export PDF</a>
     </div>
   </div>
